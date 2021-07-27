@@ -2,7 +2,7 @@
 
 # Reddit AutoPost
 
-An simple way to speed up or automate reddit posting. May contain bugs due to being somewhat spaghetti.
+Automatic/easy reddit posting. May contain bugs due to being somewhat spaghetti.
 
 ## Setup
 
