@@ -37,7 +37,7 @@ You can obtain an app id and secret by visiting [this site](https://ssl.reddit.c
 
 ## Adding Posts
 
-Post files determine the content of your posts and are located in the `/accounts/` folder. They look like this:
+Post files determine the content of your posts and are located in the `/posts/` folder. They look like this:
 
 ![](https://cdn.discordapp.com/attachments/833909925255708682/869418125454639114/unknown.png)
 
