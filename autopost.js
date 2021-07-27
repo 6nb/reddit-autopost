@@ -5,9 +5,9 @@
 const fs = require('fs');
 const req = require('request');
 const log = {
-    send:function (output) { console.log(`\n\x1b[35m[AutoPost]\x1b[37m ${output}\n`)},
-    sending:function (output) { console.log(`\n\x1b[35m[AutoPost]\x1b[37m ${output}`)},
-    err:function (output) { console.log(`\n\x1b[31m[Error]\x1b[37m ${output}\n`)}
+    send:function (output) {console.log(`\n\x1b[35m[AutoPost]\x1b[37m ${output}\n`)},
+    sending:function () {console.log(`\n\x1b[35m[AutoPost]\x1b[37m Sending...`)},
+    err:function (output) {console.log(`\n\x1b[31m[Error]\x1b[37m ${output}\n`)}
 }
 log.send('Script started.');
 
@@ -19,7 +19,7 @@ var p = 0;
 // Sending posts
 function createPost (account, post) {
 
-    log.sending('Sending...');
+    log.sending();
 
     // Obtain token
     req({
