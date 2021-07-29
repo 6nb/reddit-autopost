@@ -44,7 +44,7 @@ Post files determine the content of your posts and are located in the `/posts/` 
 
 ## Running Commands
 
-To actually make posts, you can run these commands in the command prompt windwow.
+To actually make posts, you can run these commands in the command prompt window.
 
 * `p {account} {post}` - make a single post. If you don't provide a "post", it will randomly select one. If you provide neither an "account" nor a "post", it will randomly select both.
 * `l [delay in minutes]` - loop posting on a set interval. This method will cycle through all your accounts and posts.
