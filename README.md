@@ -2,13 +2,26 @@
 
 # Reddit AutoPost
 
-Automatic/easy reddit posting. May contain bugs due to being somewhat spaghetti.
+Reddit post automation.
 
 ## Setup
 
-Use [this guide](https://github.com/bigsnailmonster/snailbot-assets/blob/main/setting%20up%20node%20projects.md).
+Requires: [request](https://www.npmjs.com/package/request)
 
-Packages: [request](https://www.npmjs.com/package/request)
+1. Install [Node.js](https://nodejs.org/en/)
+
+2. Download and unzip this repo's release into your desired location. In this folder you'll see two `.bat` files: `setup.bat` and `run.bat`.
+
+3. If you're on Windows, double clicking `setup.bat` will set up your project and install required packages. When it finishes, simply double click `run.bat` to run the script. Whenever you want to run it, just open `run.bat`. You can delete `setup.bat`; you won't need it again.
+
+You can also set up manually by navigating to the directory and running:
+
+`npm init`
+
+`npm i request`
+
+and to run, `node .`
+
 
 ## Creating Files
 
