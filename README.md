@@ -2,72 +2,56 @@
 
 # Reddit AutoPost
 
-Reddit post automation.
+Reddit post automation with NodeJS.
 
 ## Setup
 
-Requires: [request](https://www.npmjs.com/package/request)
+Install [NodeJS](https://nodejs.org/en/) and [request](https://www.npmjs.com/package/request). Download and unzip the repo.
 
-1. Install [Node.js](https://nodejs.org/en/)
+On windows run `setup.bat` then `run.bat`. Alternatively, 
 
-2. Download and unzip this repo's release into your desired location. In this folder you'll see two `.bat` files: `setup.bat` and `run.bat`.
-
-3. If you're on Windows, double clicking `setup.bat` will set up your project and install required packages. When it finishes, simply double click `run.bat` to run the script. Whenever you want to run it, just open `run.bat`. You can delete `setup.bat`; you won't need it again.
-
-You can also set up manually by navigating to the directory and running:
-
-`npm init`
+`npm init -y`
 
 `npm i request`
 
-and to run, `node .`
+and `node .` to run
 
 
 ## Creating Files
 
-Account and post information is stored in `.json` files. You can copy the `example.json` files in both folders, open them with notepad, and edit them when you want to add posts or accounts.
+Account and post information is stored in `.json` files. Use `example.json` as a formatting guide.
 
-## Adding Accounts
+### Adding Accounts
 
-Account files are located in the `/accounts/` folder. They require:
+Account files are located in the `/accounts/` folder and require this info:
 
-1. `username` - your account username
-2. `password` - your account password
-3. `app id` - a reddit app id on your account
-4. `secret` - that app's secret
 
-![](https://cdn.discordapp.com/attachments/833909925255708682/869414396584132718/unknown.png)
+![](https://user-images.githubusercontent.com/77910109/147604625-adf881b5-13fa-45a4-8176-3ef783f71c9f.png)
 
-You can obtain an app id and secret by visiting [this site](https://ssl.reddit.com/prefs/apps/) and selecting `create an application`. Filling out the form like below, clicking `create app`, and then clicking `edit` will reveal these values.
+You can obtain an app id and secret by visiting [this site](https://ssl.reddit.com/prefs/apps/) and selecting `create an application`. Fill out the form, click `create app`, then click `edit` to show the values.
 
-![](https://cdn.discordapp.com/attachments/833909925255708682/869415871657947146/unknown.png)
+![](https://user-images.githubusercontent.com/77910109/147604640-53eac8b6-5494-4ed2-871f-d14534b6ded8.png)
 
-![](https://cdn.discordapp.com/attachments/833909925255708682/869417667713458176/app.PNG)
+![](https://user-images.githubusercontent.com/77910109/147604657-326ecc31-2000-4d37-adad-d58f34271e22.png)
 
-## Adding Posts
+### Adding Posts
 
-Post files determine the content of your posts and are located in the `/posts/` folder. They require:
+Post configs are stored in the `/posts/` folder and require this info:
 
-1. `subreddit` - the subreddit you want to post to
-2. `type` - the type of post: either "text," "image," or "link"
-3. `title` - the title of your post
-4. `content` - the content of your post, whether it be a text body or a url
+![](https://user-images.githubusercontent.com/77910109/147604671-9e21be4c-e44e-488a-8ecb-3c7b1520a165.png)
 
-![](https://cdn.discordapp.com/attachments/833909925255708682/869418125454639114/unknown.png)
+`type` = the type of post: "text," "image," or "link"
+
+`content` = either some text or a url depending on type
 
 ## Running Commands
+Enter these into the terminal to start posting:
 
-To actually make posts, you can run these commands in the command prompt window.
-
-* `p {account} {post}` - make a single post. If you don't provide a "post", it will randomly select one. If you provide neither an "account" nor a "post", it will randomly select both.
-* `l [delay in minutes]` - loop posting on a set interval. This method will cycle through all your accounts and posts.
-* `f` - displays the names of each of your account/post files
-* `c` - cancels any active loops
+* `p {account} {post}` - make a single post. You can leave out account or post for random selection.
+* `l [delay in minutes]` - loop posting on a set interval, cycling through your accounts and posts.
+* `f` - list account and posts files.
+* `c` - cancel active loops
 
 ## Example
 
 https://user-images.githubusercontent.com/77910109/127091630-d2c7267d-c6a3-445c-a54f-bf8ee46f6057.mp4
-
-## What if thing no worky?
-
-https://bigsnail.monster/configissue/1.gif
